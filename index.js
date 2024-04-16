@@ -18,7 +18,7 @@ const questions = [
         type: "list",
         name:"license",
         message:"Machines Usage Rights?",
-        choices:["MIT", "AFL-3.0", "Apache-2.0", "WTFPL", "	OSL-3.0" ]
+        choices:["MIT", "AFL-3.0", "Apache-2.0", "WTFPL", "OSL-3.0" ]
     },
     {
         type: "input",
@@ -59,10 +59,9 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 function init() {
     console.log("Initializing application...")
-        then.inquirer
-        then, quetions 
-
-
+    inquirer.prompt(questions).then((answers) => {
+        writeToFile("README.md", answers);
+    })
 }
 
 // Function call to initialize app
