@@ -21,7 +21,7 @@ const questions = [
         type: "list",
         name:"license",
         message:colors.bgRed("Machines Usage Rights?"),
-        choices:["MIT", "AFL-3.0", "Apache-2.0", "WTFPL", "OSL-3.0" ]
+        choices:["MIT", "Apache-2.0", "WTFPL", "OSL-3.0" ]
     },
     {
         type: "input",
