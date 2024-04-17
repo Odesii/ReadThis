@@ -1,11 +1,11 @@
-
+// required packages 
 const inquirer = require('inquirer');
 const colors = require('colors')
 const fs = require('fs');
 //links markdown generation to index
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
-// TODO: Create an array of questions for user input
+//List of Questions for inquirer to use 
 const questions = [
     {
         type: "input",
@@ -45,13 +45,18 @@ const questions = [
     },
     {
         type: "input",
-        name:"questions",
-        message:colors.bgRed("Who to Contact with Questions About the Machine?")
+        name:"user",
+        message:colors.bgRed("What it the Operators Name")
+    },
+    {
+        type: "input",
+        name:"email",
+        message:colors.bgRed("How does the Machine contact you?")
     }
 
 ];
 
-// TODO: Create a function to write README file
+//  a function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
     err ? console.error(err) : console.log(colors.bgGreen('Your Documentation is Ready'))
@@ -59,7 +64,7 @@ function writeToFile(fileName, data) {
 
 }
 
-// TODO: Create a function to initialize app
+//  function to initialize app in console starting off with ASCII art the running inquire for user input
 function init() {
     console.log("Initializing application...")
     console.log(colors.brightGreen(`
