@@ -16,9 +16,9 @@ It's about as straightforward as you'd expect, but I know you'll ask anyway.
 
 ## ScreenShots
 
-![VIDEO DEMO](https://youtu.be/qvVhImXRsTo)
+[VIDEO DEMO](https://youtu.be/qvVhImXRsTo)
 
-![Screen](https://imgur.com/RU6mi2E)
+[Screen](https://imgur.com/RU6mi2E)
 
 ## Installation
 
