@@ -2,6 +2,7 @@
 const inquirer = require('inquirer');
 const colors = require('colors')
 const fs = require('fs');
+const path = require('path');
 //links markdown generation to index
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
@@ -58,7 +59,10 @@ const questions = [
 
 //  a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, data, (err) =>
+    const dir = './output';
+    const filePath = path.join(dir, fileName);
+
+    fs.writeFile(filePath, data, (err) =>
     err ? console.error(err) : console.log(colors.bgGreen('Your Documentation is Ready'))
   );
 
